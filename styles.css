@@ -10,6 +10,14 @@ body{
   background:#0a0a0a;
   color:white;
 }
+*{
+  box-sizing: border-box;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
 section{
   scroll-margin-top: 100px;
 }
@@ -133,6 +141,7 @@ nav a:hover{
   max-width:1200px;
   margin:auto;
   padding:20px;
+  box-sizing: border-box;
 }
 
 .hero-cyber img,
@@ -205,16 +214,15 @@ nav a:hover{
 .slider img{
   width:100%;
   height:100%;
-  object-fit:cover;
-  display:block;
+  object-fit:conver;
 
-  transform:scale(1.1);
-  transition:transform 4s ease;
+  transform: scale(1.03);
+  transition: transform 6s ease;
 }
+
 .slider a.active img{
-  transform:scale(1);
+  transform: scale(1);
 }
-
 /* =========================
    BOTONES SLIDER
 ========================= */
@@ -338,8 +346,16 @@ header{
   text-align:center;
 }
 .slider{
-  height:260px;
+  width:100%;
+  margin:0 auto;
+  height:auto;
+  aspect-ratio: 16 / 9; /* 👈 mantiene proporción */
   object-position: center center;
+}
+.slider img{
+  width:100%;
+  height:100%;
+  object-fit: contain; /* 👈 NO recorta */
 }
 
 nav a{
@@ -349,9 +365,10 @@ nav a{
 .hero-cyber,
 .hero-wukong{
   flex-direction:column;
+  display:flex;
   text-align:center;
   gap:20px;
-  padding: 0 0px;
+  padding: 0 10px;
 }
 .wukong-page .hero-wukong img{
   width:100%;
@@ -360,12 +377,11 @@ nav a{
 }
 .hero-cyber img,
 .hero-wukong img{
-  width:100%;
-  max-width:90%; 
-  margin:0 auto;
-  display:block;
+  width:100% !important;
+  aspect-ratio: 20 / 9;
+  object-fit: cover;
+  max-height:300px; /* 👈 ajusta */
 }
-
 .hero-side-text{
   max-width:100%;
 }
