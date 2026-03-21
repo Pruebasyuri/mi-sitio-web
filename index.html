@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>NOTICIAS Nvidia</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="home-page">
+
+<div class="fade-in" id="page">
+
+<!-- HEADER -->
+<header>
+<h1>Nvidia Noticias</h1>
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#gaming">Gaming</a>
+<a href="#ia">IA</a>
+<a href="#hardware">Hardware</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+
+<div class="slider">
+
+<a href="rtx4060ti.html">
+<img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/geforce-rtx-4060-4060ti/geforce-rtx-4060-family-ogimage.jpg">
+</a>
+
+<a href="cyberpunk.html">
+<img src="https://i.ytimg.com/vi/_75FAksd0xw/maxresdefault.jpg">
+</a>
+
+<a href="rtx5090ti.html">
+<img src="https://cdn.wccftech.com/wp-content/uploads/2025/01/NVIDIA-GeForce-RTX-5090-HD-1920x1056.jpeg">
+</a>
+
+<a href="ia.html">
+<img src="https://d59jb5sy46ag5.cloudfront.net/filesedc/uploads/image/post/Respuesta_nvidia_jensen_huang_criticas_dlss_5_0f2d71fbaec8.jpg">
+</a>
+
+</div>
+
+<button class="prev">&#10094;</button>
+<button class="next">&#10095;</button>
+
+</section>
+
+<!-- TEXTO HERO -->
+<section class="hero-text">
+<h2>Última noticia</h2>
+<p>Nuevas GPUs revolucionan el mercado</p>
+</section>
+
+<!-- GAMING -->
+<section id="gaming" class="news">
+
+<h2>🎮 Gaming - Últimos lanzamientos</h2>
+
+<a href="cyberpunk.html" class="card">
+<article>
+<h3>Cyberpunk 2077</h3>
+<p>DLSS y Ray Tracing avanzado.</p>
+</article>
+</a>
+
+<a href="alanwake.html" class="card">
+<article>
+<h3>Alan Wake 2</h3>
+<p>Gráficos exigentes con DLSS.</p>
+</article>
+</a>
+
+<a href="wukong.html" class="card">
+<article>
+<h3>Black Myth: Wukong</h3>
+<p>Acción con gráficos next-gen.</p>
+</article>
+</a>
+
+<a href="starfield.html" class="card">
+<article>
+<h3>Starfield</h3>
+<p>Exploración espacial optimizada.</p>
+</article>
+</a>
+
+<a href="hogwarts.html" class="card">
+<article>
+<h3>Hogwarts Legacy</h3>
+<p>Mundo abierto mágico.</p>
+</article>
+</a>
+
+<a href="spiderman.html" class="card">
+<article>
+<h3>Spider-Man</h3>
+<p>Ray Tracing y fluidez.</p>
+</article>
+</a>
+
+<a href="avatar.html" class="card">
+<article>
+<h3>Avatar</h3>
+<p>Entornos impresionantes.</p>
+</article>
+</a>
+
+<a href="cod.html" class="card">
+<article>
+<h3>COD MW3</h3>
+<p>FPS competitivo.</p>
+</article>
+</a>
+
+<a href="forza.html" class="card">
+<article>
+<h3>Forza</h3>
+<p>Simulación realista.</p>
+</article>
+</a>
+
+<a href="finals.html" class="card">
+<article>
+<h3>The Finals</h3>
+<p>Destrucción en tiempo real.</p>
+</article>
+</a>
+
+</section>
+
+<!-- IA -->
+<section id="ia" class="news">
+
+<h2>🤖 Inteligencia Artificial</h2>
+
+<article>
+<h3>IA en videojuegos</h3>
+<p>La inteligencia artificial cambia todo...</p>
+</article>
+
+<article>
+<h3>IA generativa</h3>
+<p>NVIDIA lidera avances en IA moderna...</p>
+</article>
+
+</section>
+
+<!-- HARDWARE -->
+<section id="hardware" class="news">
+
+<h2>🖥️ Hardware</h2>
+
+<article>
+<h3>Nuevos procesadores</h3>
+<p>Más potencia que nunca...</p>
+</article>
+
+<article>
+<h3>Tarjetas gráficas</h3>
+<p>Las RTX dominan el mercado...</p>
+</article>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Yuri</p>
+</footer>
+
+</div>
+
+<!-- ANIMACIÓN DE CARGA -->
+<script>
+window.addEventListener("load", () => {
+  document.getElementById("page").classList.add("show");
+});
+</script>
+
+
+<!-- SLIDER -->
+<script>
+let index = 0;
+const slides = document.querySelectorAll(".slider a");
+
+function showSlide(i) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[i].classList.add("active");
+}
+
+document.querySelector(".next").onclick = () => {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+};
+
+document.querySelector(".prev").onclick = () => {
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+};
+
+setInterval(() => {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}, 4000);
+
+showSlide(index);
+</script>
+
+
+<!-- ANIMACIÓN AL HACER SCROLL -->
+<script>
+const sections = document.querySelectorAll(".fade-section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+</script>
+
+</body>
+</html>

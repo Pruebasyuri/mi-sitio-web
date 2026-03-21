@@ -1,0 +1,385 @@
+/* =========================
+   RESET
+========================= */
+
+body{
+  overflow-x:hidden;
+  margin:0;
+  padding:0;
+  font-family:Arial, sans-serif;
+  background:#0a0a0a;
+  color:white;
+}
+section{
+  scroll-margin-top: 100px;
+}
+#inicio{
+  scroll-margin-top: 80px; /* ajusta según altura del header */
+}
+html{
+  scroll-behavior:smooth;
+}
+#random-news{
+  display: contents;
+}
+/* =========================
+   ANIMACIONES
+========================= */
+
+.fade-in{
+  opacity:0;
+  transform:translateY(20px);
+  transition:all .8s ease;
+}
+
+.fade-in.show{
+  opacity:1;
+  transform:translateY(0);
+}
+.fade-section{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+
+.fade-section.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  background:black;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+nav a{
+  margin:0 10px;
+  color:#aaa;
+  text-decoration:none;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#76ff03;
+}
+
+/* =========================
+   HERO GENERAL
+========================= */
+
+.hero{
+  position:relative;
+  width:100%;
+  height:auto;
+  min-height:260px;
+  padding:20px 0;
+}
+.hero img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* =========================
+   TEXTO HERO
+========================= */
+
+.hero-text{
+  text-align:center;
+  margin-top:20px;
+  margin-bottom:40px;
+}
+
+.hero-text h2{
+  font-size:32px;
+  margin-bottom:10px;
+  position:relative;
+}
+
+.hero-text h2::after{
+  content:"";
+  display:block;
+  width:120px;
+  height:3px;
+  background:#76ff03;
+  margin:10px auto;
+}
+
+.hero-text p{
+  color:#76ff03;
+  font-size:18px;
+}
+
+/* =========================
+   HERO CYBERPUNK / WUKONG
+========================= */
+
+.hero-cyber,
+.hero-wukong{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:40px;
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+}
+
+.hero-cyber img,
+.hero-wukong img{
+  width:45%;
+  max-width:500px;
+  height:auto;
+  filter: brightness(0.85) contrast(1.1);
+  object-fit:cover;
+  object-position:center;
+}
+
+.hero-side-text{
+  max-width:350px;
+}
+
+.hero-side-text h2{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.hero-side-text p{
+  color:#76ff03;
+  font-size:22px;
+}
+
+/* =========================
+   PAGINAS ESPECIFICAS
+========================= */
+
+.home-page .hero{
+  padding:40px 0;
+  background:url("https://img.freepik.com/vector-gratis/abstracto-gradiente-fondo-lineas-diagonales_23-2150539669.jpg?semt=ais_rp_progressive&w=740&q=80") no-repeat center/cover;
+}
+
+.home-page .slider img{
+  object-fit:cover;
+  object-position:center 60%;
+}
+
+.wukong-page{
+  background:linear-gradient(to right,#0f0f0f,#1a1a1a);
+}
+
+/* =========================
+   SLIDER
+========================= */
+
+.slider{
+  position:relative;
+  width:90%;
+  max-width:900px;
+  margin:0 auto;
+  border-radius:20px;
+  overflow:hidden;
+  background:transparent;
+  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+  height:450px;
+}
+.slider a{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity .8s ease;
+}
+.slider a.active{
+  opacity:1;
+  z-index:2;
+}
+.slider img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+
+  transform:scale(1.1);
+  transition:transform 4s ease;
+}
+.slider a.active img{
+  transform:scale(1);
+}
+
+/* =========================
+   BOTONES SLIDER
+========================= */
+
+.prev,
+.next{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.5);
+  border:none;
+  color:white;
+  font-size:30px;
+  padding:10px;
+  cursor:pointer;
+  z-index:4;
+}
+
+.prev{ left:10px; }
+.next{ right:10px; }
+
+.prev:hover,
+.next:hover{
+  background:rgba(118,255,3,.5);
+}
+
+/* =========================
+   NEWS
+========================= */
+
+.news{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  padding:60px;
+  margin:40px 20px;
+  background:#111;
+  border-radius:20px;
+}
+
+.news h2{
+  grid-column:1 / -1;
+  margin-bottom:30px;
+  text-align:center;
+  font-size:32px;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.card{
+  text-decoration:none;
+  color:white;
+}
+
+.card article{
+  background:linear-gradient(145deg,#1a1a1a,#222);
+  padding:25px;
+  border-radius:15px;
+  transition:.3s;
+  border:1px solid #2a2a2a;
+}
+
+.card article:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 20px rgba(118,255,3,.3);
+}
+
+/* =========================
+   NOTICIA GRANDE
+========================= */
+
+.big-news{
+  padding:20px;
+  max-width:900px;
+  margin:auto;
+}
+
+.big-news h2{
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+.big-news img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:25px;
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.big-news p,
+.news p{
+  font-size:16px;
+  line-height:1.8;
+  letter-spacing:.5px;
+  color:#ccc;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:black;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width:768px){
+
+header{
+  flex-direction:column;
+  text-align:center;
+}
+.slider{
+  height:260px;
+  object-position: center center;
+}
+
+nav a{
+  display:inline-block;
+  margin:5px;
+}
+.hero-cyber,
+.hero-wukong{
+  flex-direction:column;
+  text-align:center;
+  gap:20px;
+  padding: 0 0px;
+}
+.wukong-page .hero-wukong img{
+  width:100%;
+  object-fit:cover;
+  object-position:center center;
+}
+.hero-cyber img,
+.hero-wukong img{
+  width:100%;
+  max-width:90%; 
+  margin:0 auto;
+  display:block;
+}
+
+.hero-side-text{
+  max-width:100%;
+}
+
+.hero-side-text h2{
+  font-size:28px;
+}
+
+.hero-side-text p{
+  font-size:18px;
+}
+
+.news{
+  padding:20px;
+}
+
+}

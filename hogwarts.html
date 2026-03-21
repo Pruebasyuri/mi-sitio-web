@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Hogwarts Legacy - Nvidia Noticias</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="wukong-page">
+
+<div class="fade-in" id="page">
+
+<!-- HEADER -->
+<header>
+<h1>Nvidia Noticias</h1>
+<nav>
+<a href="index.html#inicio">Inicio</a>
+<a href="index.html#gaming">Gaming</a>
+<a href="index.html#ia">IA</a>
+<a href="index.html#hardware">Hardware</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero hero-wukong">
+
+<img src="https://cdn.cloudflare.steamstatic.com/steam/apps/990080/header.jpg">
+
+<div class="hero-side-text">
+<h2>Hogwarts Legacy</h2>
+<p>Magia, mundo abierto y gráficos de nueva generación</p>
+</div>
+
+</section>
+
+<!-- TEXTO HERO -->
+<section class="hero-text">
+<h2>Una experiencia mágica</h2>
+<p>Ray Tracing, DLSS y un mundo abierto impresionante</p>
+</section>
+
+<!-- NOTICIA PRINCIPAL -->
+<section class="big-news">
+
+<h2>El mundo mágico cobra vida</h2>
+
+<img src="https://cdn.playfront.de/uploads/2026/03/nvdia-dlls-5--1280x720.webp">
+
+<p>
+Hogwarts Legacy ofrece una de las experiencias más inmersivas dentro del universo mágico. 
+Gracias a las tecnologías de NVIDIA, el juego logra un nivel visual sorprendente.
+</p>
+
+<p>
+El uso de Ray Tracing permite reflejos realistas, sombras dinámicas y una iluminación 
+más natural dentro del castillo y sus alrededores.
+</p>
+
+<p>
+Además, DLSS mejora el rendimiento sin sacrificar calidad, permitiendo disfrutar del juego 
+con fluidez incluso en configuraciones exigentes.
+</p>
+
+</section>
+
+<!-- SECCIÓN RELACIONADA -->
+<section class="news">
+
+<h2>🔥 Más sobre gaming exigente</h2>
+
+<div id="random-news"></div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Yuri</p>
+</footer>
+
+</div>
+
+<!-- ANIMACIÓN DE CARGA -->
+<script>
+window.addEventListener("load", () => {
+  document.getElementById("page").classList.add("show");
+});
+</script>
+
+<!-- NOTICIAS ALEATORIAS -->
+<script>
+const noticias = [
+  {
+    titulo: "Cyberpunk 2077",
+    texto: "Ray Tracing y DLSS al máximo nivel.",
+    link: "cyberpunk.html"
+  },
+  {
+    titulo: "Black Myth: Wukong",
+    texto: "Gráficos next-gen impresionantes.",
+    link: "wukong.html"
+  },
+  {
+    titulo: "Starfield",
+    texto: "Exploración espacial exigente.",
+    link: "starfield.html"
+  },
+  {
+    titulo: "Alan Wake 2",
+    texto: "Terror psicológico con gráficos realistas.",
+    link: "alanwake.html"
+  },
+  {
+    titulo: "RTX 4060 Ti",
+    texto: "Potencia accesible con DLSS 3.",
+    link: "rtx4060ti.html"
+  },
+  {
+    titulo: "The Finals",
+    texto: "Destrucción en tiempo real.",
+    link: "finals.html"
+  }
+];
+
+// mezclar
+function mezclar(array){
+  return array.sort(() => Math.random() - 0.5);
+}
+
+// seleccionar 3
+const seleccion = mezclar([...noticias]).slice(0, 3);
+
+// renderizar
+const contenedor = document.getElementById("random-news");
+
+seleccion.forEach(noticia => {
+  contenedor.innerHTML += `
+    <a href="${noticia.link}" class="card fade-section">
+      <article>
+        <h3>${noticia.titulo}</h3>
+        <p>${noticia.texto}</p>
+      </article>
+    </a>
+  `;
+});
+</script>
+
+<!-- ANIMACIÓN SCROLL -->
+<script>
+const sections = document.querySelectorAll(".fade-section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+</script>
+
+</body>
+</html>
