@@ -468,10 +468,19 @@ footer{
 @media (max-width:768px){
 
 header{
-  flex-direction:column;
-  text-align:center;
+    display:flex; /* 👈 volvemos a flex */
+    flex-direction:column; /* 👈 uno debajo del otro */
+    align-items:center;
+    text-align:center;
+    gap:10px;
+  }
+  header nav{
+  position: static; /* 👈 quita el absolute */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* 👈 permite que bajen en línea */
+  gap: 10px;
 }
-
 .slider{
   width:100%;
   margin:0 auto;
@@ -486,8 +495,8 @@ header{
 }
 
 nav a{
-  display:inline-block;
-  margin:5px;
+  margin: 5px;
+  font-size: 14px;
 }
 .hero-vertical{
   display:flex;
