@@ -7,9 +7,7 @@
 <title>Alan Wake 2 - Nvidia Noticias</title>
 <link rel="stylesheet" href="styles.css">
 </head>
-
 <body class="wukong-page">
-
 <div class="fade-in" id="page">
 
 <!-- HEADER -->
@@ -23,113 +21,61 @@
 </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero hero-wukong">
+<!-- 🔥 LAYOUT PRINCIPAL -->
+<div class="layout">
 
-<img src="https://gaming-cdn.com/images/products/13290/orig/alan-wake-2-pc-juego-epic-games-cover.jpg">
+  <!-- IZQUIERDA -->
+  <main class="content">
 
-<div class="hero-side-text">
-<h2>Alan Wake 2</h2>
-<p>Terror psicológico con gráficos de nueva generación</p>
+     <!-- TEXTO -->
+<section class="hero-text">
+  <h2>Alan Wake 2</h2>
+  <p>Terror psicológico con gráficos de nueva generación</p>
+</section>
+   <!-- HERO SOLO IMAGEN -->
+<section class="big-news">
+  <img src="https://gaming-cdn.com/images/products/13290/orig/alan-wake-2-pc-juego-epic-games-cover.jpg">
+</section>
+
+    <!-- NOTICIA -->
+    <section class="big-news">
+
+      <h2>El poder gráfico de Alan Wake 2</h2>
+
+      <img src="https://i.ytimg.com/vi/XeeZrDTXJAo/hq720.jpg">
+
+      <p>
+      Alan Wake 2 se ha convertido en uno de los juegos más exigentes gráficamente de la actualidad. 
+      Gracias a tecnologías como el Ray Tracing completo y DLSS 3, NVIDIA demuestra el potencial de sus GPUs RTX.
+      </p>
+
+      <p>
+      El juego apuesta por una iluminación realista, sombras dinámicas y reflejos avanzados que elevan 
+      la inmersión a un nivel cinematográfico.
+      </p>
+
+      <p>
+      Sin una GPU potente, la experiencia puede verse limitada, lo que convierte a Alan Wake 2 en 
+      un referente para medir el rendimiento del hardware actual.
+      </p>
+
+    </section>
+ <!-- TEXTO HERO -->
+    <section class="hero-text">
+      <h2>Una experiencia cinematográfica</h2>
+      <p>Iluminación realista, DLSS 3 y Ray Tracing extremo</p>
+    </section>
+
+  </main>
+
+  <!-- DERECHA -->
+  <aside class="sidebar">
+  <h3>🔥 Más noticias</h3>
+  <div id="sidebar-news"></div>
+</aside>
+
 </div>
 
-</section>
-
-<!-- TEXTO HERO -->
-<section class="hero-text">
-<h2>Una experiencia cinematográfica</h2>
-<p>Iluminación realista, DLSS 3 y Ray Tracing extremo</p>
-</section>
-
-<!-- NOTICIA PRINCIPAL -->
-<section class="big-news">
-
-<h2>El poder gráfico de Alan Wake 2</h2>
-
-<img src="https://i.ytimg.com/vi/XeeZrDTXJAo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC5s7DhfPJIfSXCIOBZvVmvC2Um7w">
-
-<p>
-Alan Wake 2 se ha convertido en uno de los juegos más exigentes gráficamente de la actualidad. 
-Gracias a tecnologías como el Ray Tracing completo y DLSS 3, NVIDIA demuestra el potencial de sus GPUs RTX.
-</p>
-
-<p>
-El juego apuesta por una iluminación realista, sombras dinámicas y reflejos avanzados que elevan 
-la inmersión a un nivel cinematográfico. Cada escena está diseñada para aprovechar al máximo 
-las capacidades de las tarjetas gráficas modernas.
-</p>
-
-<p>
-Sin una GPU potente, la experiencia puede verse limitada, lo que convierte a Alan Wake 2 en 
-un referente para medir el rendimiento del hardware actual.
-</p>
-
-</section>
-
-<!-- SECCIÓN RELACIONADA -->
-<section class="news">
-
-<h2>🔥 Más sobre gaming exigente</h2>
-
-<div id="random-news"></div>
-
-</section>
-<script>
-const noticias = [
-  {
-    titulo: "Cyberpunk 2077",
-    texto: "Ray Tracing y DLSS al máximo nivel.",
-    link: "cyberpunk.html"
-  },
-  {
-    titulo: "Black Myth: Wukong",
-    texto: "Gráficos next-gen impresionantes.",
-    link: "wukong.html"
-  },
-  {
-    titulo: "Starfield",
-    texto: "Exploración espacial exigente.",
-    link: "starfield.html"
-  },
-  {
-    titulo: "Alan Wake 2",
-    texto: "Terror psicológico con gráficos realistas.",
-    link: "alanwake.html"
-  },
-  {
-    titulo: "RTX 4060 Ti",
-    texto: "Potencia accesible con DLSS 3.",
-    link: "rtx4060ti.html"
-  },
-  {
-    titulo: "Hogwarts Legacy",
-    texto: "Mundo abierto mágico.",
-    link: "hogwarts.html"
-  }
-];
-
-// mezclar
-function mezclar(array){
-  return array.sort(() => Math.random() - 0.5);
-}
-
-// seleccionar 3
-const seleccion = mezclar([...noticias]).slice(0, 3);
-
-// renderizar
-const contenedor = document.getElementById("random-news");
-
-seleccion.forEach(noticia => {
-  contenedor.innerHTML += `
-    <a href="${noticia.link}" class="card fade-section">
-      <article>
-        <h3>${noticia.titulo}</h3>
-        <p>${noticia.texto}</p>
-      </article>
-    </a>
-  `;
-});
-</script>
 <!-- FOOTER -->
 <footer>
 <p>© 2026 Yuri</p>
@@ -137,14 +83,17 @@ seleccion.forEach(noticia => {
 
 </div>
 
-<!-- ANIMACIÓN DE CARGA -->
+<!-- ANIMACIÓN -->
 <script>
 window.addEventListener("load", () => {
   document.getElementById("page").classList.add("show");
 });
 </script>
 
-<!-- ANIMACIÓN SCROLL -->
+document.getElementById("random-news").innerHTML = html;
+</script>
+
+<!-- SCROLL ANIMACIÓN -->
 <script>
 const sections = document.querySelectorAll(".fade-section");
 
@@ -160,6 +109,6 @@ sections.forEach(section => {
   observer.observe(section);
 });
 </script>
-
+<script src="news.js"></script>
 </body>
 </html>
