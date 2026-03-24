@@ -11,7 +11,6 @@
 
 <div class="fade-in" id="page">
 
-<!-- HEADER -->
 <header>
 <h1>Cyberpunk 2077</h1>
 <nav>
@@ -19,97 +18,75 @@
 </nav>
 </header>
 
-<!-- NOTICIA PRINCIPAL -->
-<section class="big-news">
+<!-- 🔥 LAYOUT -->
+<div class="layout">
 
-<h2>🚀 Cyberpunk: Edgerunners 2 ya está en desarrollo</h2>
+  <!-- IZQUIERDA -->
+  <main class="content">
+    <!-- NOTICIA -->
+    <section class="big-news">
 
-<img src="https://imagenes.hobbyconsolas.com/files/image_1920_1080/uploads/imagenes/2025/07/06/6904a199189da.png">
+      <h2>🚀 Cyberpunk: Edgerunners 2 ya está en desarrollo</h2>
 
-<p>
-El universo de Cyberpunk regresa con un nuevo anime en desarrollo: Cyberpunk: Edgerunners 2.
-Este nuevo proyecto contará con una historia completamente nueva diferente a la primera temporada.
+      <img src="https://imagenes.hobbyconsolas.com/files/image_1920_1080/uploads/imagenes/2025/07/06/6904a199189da.png">
 
-A diferencia del anime original, esta nueva serie será una historia independiente con nuevos
-personajes y un enfoque más oscuro dentro de Night City.
+      <p>
+      El universo de Cyberpunk regresa con un nuevo anime en desarrollo.
+      </p>
 
-Además, volverá el estudio Trigger junto con CD Projekt RED prometiendo una experiencia más intensa.
-</p>
+      <p>
+      Será una historia independiente con nuevos personajes y un enfoque más oscuro.
+      </p>
 
-<h2 style="margin-top:40px;">🎬 Cyberpunk: Edgerunners (anime original)</h2>
+      <h2 style="margin-top:40px;">🎬 Edgerunners original</h2>
 
-<img src="https://www.cyberpunk.net/build/images/edgerunners/top/cover-desktop@1x-7e66501a.jpg">
+      <img src="https://www.cyberpunk.net/build/images/edgerunners/top/cover-desktop@1x-7e66501a.jpg">
 
-<p>
-Cyberpunk: Edgerunners fue lanzado en 2022 y rápidamente se convirtió en uno de los animes más populares del género cyberpunk.
+      <p>
+      Uno de los animes más populares del género cyberpunk.
+      </p>
+    <!-- HERO -->
+    <section class="hero hero-cyber">
+      <img src="https://www.viaxesports.com/wp-content/uploads/2020/06/V-V2-en.jpg">
+      <div class="hero-side-text">
+        <h2>CYBERPUNK 2077</h2>
+        <p>DLSS 4 READY</p>
+      </div>
+    </section>
 
-La historia sigue a David Martinez, un joven que intenta sobrevivir en Night City,
-una ciudad dominada por la tecnología y la violencia.
-</p>
+    </section>
 
-</section>
+    <!-- INFO -->
+    <section class="news">
 
-<!-- HERO -->
-<section class="hero hero-cyber">
+      <article>
+        <h2>🔥 Descripción</h2>
+        <p>
+        Mundo abierto con Ray Tracing y DLSS.
+        </p>
+      </article>
 
-<img src="https://www.viaxesports.com/wp-content/uploads/2020/06/V-V2-en.jpg">
+      <article>
+        <h2>⚡ Tecnologías</h2>
+        <p>
+        ✔ DLSS<br>
+        ✔ Ray Tracing<br>
+        ✔ Iluminación avanzada
+        </p>
+      </article>
 
-<div class="hero-side-text">
-<h2>CYBERPUNK 2077</h2>
-<p>DLSS 4 READY</p>
+    </section>
+
+  </main>
+
+  <!-- SIDEBAR -->
+   <aside class="sidebar">
+  <h3>🔥 Más noticias</h3>
+  <div id="sidebar-news"></div>
+</aside>
+
 </div>
 
-</section>
-<section class="news">
-
-<h2>🔥 Más sobre gaming exigente</h2>
-
-<a href="cyberpunk.html" class="card">
-<article>
-<h3>Cyberpunk 2077</h3>
-<p>Ray Tracing y DLSS al máximo nivel.</p>
-</article>
-</a>
-
-<a href="wukong.html" class="card">
-<article>
-<h3>Black Myth: Wukong</h3>
-<p>Gráficos next-gen impresionantes.</p>
-</article>
-</a>
-
-<a href="starfield.html" class="card">
-<article>
-<h3>Starfield</h3>
-<p>Exploración espacial exigente.</p>
-</article>
-</a>
-
-</section>
-<!-- INFO -->
-<section class="news">
-
-<article>
-<h2>🔥 Descripción</h2>
-<p>
-Cyberpunk 2077 es un juego de mundo abierto con gráficos de última generación,
-combinando Ray Tracing y DLSS para una experiencia visual impresionante.
-</p>
-</article>
-
-<article>
-<h2>⚡ Tecnologías</h2>
-<p>
-✔ DLSS para mejorar FPS<br>
-✔ Ray Tracing en tiempo real<br>
-✔ Iluminación avanzada<br>
-✔ Reflejos realistas
-</p>
-</article>
-
-</section>
-
-<!-- VOLVER -->
 <div style="text-align:center; margin:20px;">
 <a href="index.html" style="color:#76ff03;">⬅ Volver</a>
 </div>
@@ -118,9 +95,9 @@ combinando Ray Tracing y DLSS para una experiencia visual impresionante.
 
 <script>
 window.addEventListener("load", () => {
-document.getElementById("page").classList.add("show");
+  document.getElementById("page").classList.add("show");
 });
 </script>
-
+<script src="news.js"></script>
 </body>
 </html>
