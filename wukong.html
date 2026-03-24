@@ -6,16 +6,11 @@
   <title>Black Myth: Wukong</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-window.addEventListener("load", () => {
-  document.getElementById("page").classList.add("show");
-});
-</script>
 
-</body>
-</script>
 <body class="wukong-page">
+
 <div class="fade-in" id="page">
+
   <!-- HEADER -->
   <header>
     <h1>Black Myth: Wukong</h1>
@@ -24,92 +19,93 @@ window.addEventListener("load", () => {
     </nav>
   </header>
 
-  <!-- 🔥 NOTICIA PRINCIPAL -->
-  <section class="big-news">
+  <!-- 🔥 LAYOUT -->
+  <div class="layout">
 
-    <h2>🔥 Wukong sorprende con gráficos de nueva generación</h2>
+    <!-- IZQUIERDA -->
+    <main class="content">
 
-    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/header.jpg">
+      <!-- NOTICIA -->
+      <section class="big-news">
 
-    <p>
-      Black Myth: Wukong se ha convertido en uno de los juegos más impactantes visualmente,
-      mostrando el verdadero potencial de la nueva generación.
+        <h2>🔥 Wukong sorprende con gráficos de nueva generación</h2>
 
-      Gracias a tecnologías avanzadas como DLSS y renderizado por inteligencia artificial,
-      el juego logra una calidad gráfica impresionante sin afectar el rendimiento.
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/header.jpg">
 
-      Sus entornos detallados, animaciones fluidas y efectos de iluminación hacen que cada
-      combate se sienta cinematográfico, posicionándolo como uno de los títulos más esperados
-      y ambiciosos de los últimos años.
-    </p>
+        <p>
+        Black Myth: Wukong se ha convertido en uno de los juegos más impactantes visualmente,
+        mostrando el verdadero potencial de la nueva generación.
+        </p>
 
-  </section>
+        <p>
+        Gracias a tecnologías avanzadas como DLSS y renderizado por inteligencia artificial,
+        el juego logra una calidad gráfica impresionante sin afectar el rendimiento.
+        </p>
 
-  <!-- HERO -->
-<section class="hero hero-wukong">
+        <p>
+        Sus entornos detallados, animaciones fluidas y efectos de iluminación hacen que cada
+        combate se sienta cinematográfico.
+        </p>
 
-  <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/black-myth-wukong-full-ray-tracing-dlss-3/black-myth-wukong-dlss-3-full-ray-tracing-launches-august-20-ogimage.jpg">
+      </section>
 
-  <div class="hero-side-text">
-    <h2>BLACK MYTH WUKONG</h2>
-    <p>NEXT GEN GRAPHICS</p>
-  </div>
+      <!-- HERO -->
+      <section class="hero hero-wukong">
 
-</section>
+        <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/black-myth-wukong-full-ray-tracing-dlss-3/black-myth-wukong-dlss-3-full-ray-tracing-launches-august-20-ogimage.jpg">
 
-  <!-- INFO -->
-  <section class="news">
+        <div class="hero-side-text">
+          <h2>BLACK MYTH WUKONG</h2>
+          <p>NEXT GEN GRAPHICS</p>
+        </div>
 
-    <article>
-      <h2>🔥 Descripción</h2>
-      <p>
-        Black Myth: Wukong es un juego de acción inspirado en la mitología china,
-        donde controlas al Rey Mono en combates intensos y escenarios impresionantes.
-      </p>
-    </article>
+      </section>
 
-    <article>
-      <h2>⚡ Tecnologías</h2>
-      <p>
-        ✔ DLSS para mayor rendimiento<br>
-        ✔ Iluminación avanzada<br>
-        ✔ Animaciones realistas<br>
-        ✔ Escenarios ultra detallados
-      </p>
-    </article>
+      <!-- INFO -->
+      <section class="news">
 
-  </section>
-<section class="news">
+        <article>
+          <h2>🔥 Descripción</h2>
+          <p>
+          Juego de acción inspirado en la mitología china donde controlas al Rey Mono
+          en combates intensos con gráficos de nueva generación.
+          </p>
+        </article>
 
-<h2>🔥 Más sobre gaming exigente</h2>
+        <article>
+          <h2>⚡ Tecnologías</h2>
+          <p>
+          ✔ DLSS para mayor rendimiento<br>
+          ✔ Iluminación avanzada<br>
+          ✔ Animaciones realistas<br>
+          ✔ Escenarios ultra detallados
+          </p>
+        </article>
 
-<a href="cyberpunk.html" class="card">
-<article>
-<h3>Cyberpunk 2077</h3>
-<p>Ray Tracing y DLSS al máximo nivel.</p>
-</article>
-</a>
+      </section>
 
-<a href="wukong.html" class="card">
-<article>
-<h3>Black Myth: Wukong</h3>
-<p>Gráficos next-gen impresionantes.</p>
-</article>
-</a>
+    </main>
 
-<a href="starfield.html" class="card">
-<article>
-<h3>Starfield</h3>
-<p>Exploración espacial exigente.</p>
-</article>
-</a>
+    <!-- 🔥 SIDEBAR -->
+   <aside class="sidebar">
+  <h3>🔥 Más noticias</h3>
+  <div id="sidebar-news"></div>
+</aside>
 
-</section>
+</div>
   <!-- VOLVER -->
   <div style="text-align:center; margin:20px;">
     <a href="index.html" style="color:#76ff03;">⬅ Volver</a>
   </div>
 
-</body>
+</div>
 
+<!-- ANIMACIÓN -->
+<script>
+window.addEventListener("load", () => {
+  document.getElementById("page").classList.add("show");
+});
+</script>
+<script src="news.js"></script>
+</body>
 </html>
