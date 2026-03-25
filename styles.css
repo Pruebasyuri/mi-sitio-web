@@ -23,7 +23,7 @@ img{
 }
 html{
   scroll-behavior:smooth;
-  scroll-padding-top: 130px;
+  scroll-padding-top: 200px;
 }
 #random-news{
   display: contents;
@@ -60,18 +60,16 @@ html{
 header{
   display:flex;
   align-items:center;
-  justify-content:center; /* 👈 centra el h1 */
+  justify-content:space-between; /* 👈 separa todo */
   padding:15px 30px;
   background:black;
   position:sticky;
   top:0;
   z-index:1000;
 }
-
 /* NAV a la izquierda */
 header nav{
-  position:absolute;
-  left:30px;
+  position:static;
   display:flex;
   gap:15px;
 }
@@ -79,7 +77,9 @@ header nav{
 /* TÍTULO */
 header h1{
   margin:0;
+  text-align:center;
 }
+
 
 nav a{
   margin:0 10px;
@@ -90,6 +90,51 @@ nav a{
 
 nav a:hover{
   color:#76ff03;
+}
+/* =========================
+   SEARCH
+========================= */
+.search-box{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  margin:20px;
+}
+
+.search-box input{
+  width:90%;
+  max-width:400px;
+  padding:10px 15px;
+  border-radius:20px;
+  border:none;
+  background:#1a1a1a;
+  color:white;
+  outline:none;
+}
+
+/* RESULTADOS */
+.search-results{
+  position:absolute;
+  top:50px;
+  width:90%;
+  max-width:400px;
+  background:#111;
+  border-radius:10px;
+  overflow:hidden;
+  z-index:999;
+}
+
+.search-results a{
+  display:block;
+  padding:10px;
+  text-decoration:none;
+  color:white;
+  border-bottom:1px solid #222;
+}
+
+.search-results a:hover{
+  background:#76ff03;
+  color:black;
 }
 /* =========================
    HERO GENERAL
@@ -481,6 +526,17 @@ header{
   flex-wrap: wrap; /* 👈 permite que bajen en línea */
   gap: 10px;
 }
+.search-box{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+.search-box input{
+  padding:12px 15px;
+  font-size:16px;
+  border-radius:25px;
+}
 .slider{
   width:100%;
   margin:0 auto;
@@ -551,9 +607,10 @@ nav a{
 .news{
   padding:20px;
 }
- html{
-scroll-padding-top: 150px; /* 👈 más alto porque el header crece */
-}
+section{
+    scroll-margin-top: 140px;
+  }
+
 
 .layout{
   flex-direction:column;
