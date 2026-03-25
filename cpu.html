@@ -122,5 +122,60 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const searchInput = document.getElementById("searchInput");
+  const resultsBox = document.getElementById("searchResults");
+
+  // 🔥 BASE DE DATOS (tus páginas)
+  const data = [
+    { title: "RTX 4060 Ti", url: "rtx4060ti.html" },
+    { title: "RTX 5090", url: "rtx5090ti.html" },
+    { title: "Intel i7-14700K", url: "cpu.html" },
+    { title: "Ryzen 9000 Series", url: "amd.html" },
+    { title: "Memoria DDR5", url: "ram.html" },
+    { title: "SSD NVMe Gen 4", url: "ssd.html" },
+
+    { title: "Cyberpunk 2077", url: "cyberpunk.html" },
+    { title: "Alan Wake 2", url: "alanwake.html" },
+    { title: "Black Myth Wukong", url: "wukong.html" },
+    { title: "Starfield", url: "starfield.html" },
+    { title: "Hogwarts Legacy", url: "hogwarts.html" },
+    { title: "Spider-Man", url: "spiderman.html" },
+    { title: "Avatar", url: "avatar.html" },
+    { title: "COD MW3", url: "cod.html" },
+    { title: "Forza", url: "forza.html" },
+    { title: "The Finals", url: "finals.html" }
+  ];
+
+  searchInput.addEventListener("input", () => {
+    const value = searchInput.value.toLowerCase().trim();
+
+    resultsBox.innerHTML = "";
+
+    if(value === "") return;
+
+    const filtered = data.filter(item =>
+      item.title.toLowerCase().includes(value)
+    );
+
+    filtered.forEach(item => {
+      const a = document.createElement("a");
+      a.href = item.url;
+      a.textContent = item.title;
+      resultsBox.appendChild(a);
+    });
+  });
+
+  // ocultar si haces click fuera
+  document.addEventListener("click", (e) => {
+    if(!e.target.closest(".search-box")){
+      resultsBox.innerHTML = "";
+    }
+  });
+
+});
+</script>
 </body>
 </html>
