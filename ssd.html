@@ -12,12 +12,22 @@
 <div class="fade-in" id="page">
 
 <header>
-<h1>SSD NVMe Gen 4</h1>
-<nav>
-<a href="index.html">Inicio</a>
-</nav>
-</header>
 
+  <nav>
+    <a href="index.html#inicio">INICIO</a>
+    <a href="index.html#gaming">GAMING</a>
+    <a href="index.html#ia">IA</a>
+    <a href="index.html#hardware">HARDWARE</a>
+  </nav>
+
+  <h1 id="page-title">Intel i7-14700K</h1>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Buscar noticias...">
+    <div id="searchResults" class="search-results"></div>
+  </div>
+
+</header>
 <!-- 🔥 LAYOUT -->
 <div class="layout">
 
@@ -149,5 +159,13 @@ window.addEventListener("load", () => {
 });
 </script>
 <script src="news.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const title = document.getElementById("page-title");
+  if(title){
+    title.textContent = document.title.replace(" - Nvidia Noticias", "");
+  }
+});
+</script>
 </body>
 </html>
